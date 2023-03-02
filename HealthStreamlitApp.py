@@ -26,4 +26,10 @@ with st.sidebar:
         time.sleep(5)
     st.success("Done!")
 
+    st.sidebar.write("""
+            ## About
+            The CKD Prediction Tool is..... . 
+            
+            Please note that this tool is a work in progress. Contact us [here](mailto:ahobby@healthdatasciencenewsletter) or consider checking out [GitHub](https://github.com/AndreaHobby/CKD-Prediction/blob/main/Predicting%20Chronic%20Kidney%20Disease.ipynb) repository with any suggestions or questions.     
+        """)
 
