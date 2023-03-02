@@ -21,15 +21,16 @@ st.sidebar.title("Pick Your Feature")
 with st.sidebar:
     with st.echo():
         st.write("This code will be printed to the sidebar.")
-
-    with st.spinner("Loading..."):
-        time.sleep(5)
-    st.success("Done!")
-
-    st.sidebar.write("""
+        st.write("""
             ## About
             The CKD Prediction Tool is..... . 
             
             Please note that this tool is a work in progress. Contact us [here](mailto:ahobby@healthdatasciencenewsletter) or consider checking out [GitHub](https://github.com/AndreaHobby/CKD-Prediction/blob/main/Predicting%20Chronic%20Kidney%20Disease.ipynb) repository with any suggestions or questions.     
         """)
+
+    with st.spinner("Loading..."):
+        time.sleep(5)
+    st.success("Done!")
+
+
 
