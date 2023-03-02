@@ -5,6 +5,7 @@ import streamlit as st
 
 st.title('Chronic Kidney Disease Prediction')
 
+#adds image 
 image = Image.open('./image/fnalkidney-comp_1087848275.png')
 st.image(image, caption='Sunrise by the mountains')
 
