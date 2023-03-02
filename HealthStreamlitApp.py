@@ -11,5 +11,6 @@ st.write(df)
 from PIL import Image
 import streamlit as st
 
-image = Image.open('streamlit/image/fnalkidney-comp_1087848275.png')
+image = Image.open('./image/fnalkidney-comp_1087848275.png')
 st.image(image, caption='Sunrise by the mountains')
+
