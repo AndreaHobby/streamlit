@@ -4,6 +4,7 @@ from PIL import Image
 import streamlit as st
 import numpy as np
 import pickle
+import os 
 
 
 
@@ -48,7 +49,7 @@ st.sidebar.title("About CKD App")
 
 with st.sidebar:
     st.write("""
-            The CKD Prediction Tool is..... . 
+            Please see your doctor for an accurate risk prediction. This tool is for learning purposes.  
             
             Please note that this tool is a work in progress. Contact me [here](mailto:ahobby@healthdatasciencenewsletter) or consider checking out [GitHub](https://github.com/AndreaHobby/CKD-Prediction/blob/main/Predicting%20Chronic%20Kidney%20Disease.ipynb) repository with any suggestions or questions.     
         """)
