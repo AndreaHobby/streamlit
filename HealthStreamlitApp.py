@@ -39,7 +39,6 @@ st.sidebar.title("About CKD App")
 
 with st.sidebar:
     st.write("""
-            ## About
             The CKD Prediction Tool is..... . 
             
             Please note that this tool is a work in progress. Contact us [here](mailto:ahobby@healthdatasciencenewsletter) or consider checking out [GitHub](https://github.com/AndreaHobby/CKD-Prediction/blob/main/Predicting%20Chronic%20Kidney%20Disease.ipynb) repository with any suggestions or questions.     
