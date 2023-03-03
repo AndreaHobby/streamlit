@@ -15,12 +15,23 @@ preventing its progression to kidney failure. Machine learning models can assist
 a previous project of mine that uses National Center for Health Statistics (NCHS) data. Variables such as age, gender, medical history, and laboratory
 test results will be used. By identifying patterns in the data, models can predict a patient's risk of developing CKD, allowing for early intervention and management.''')
 
-name = st.text_input('Enter your name', '')
-st.write(f'Hello {name}!')
-x = st.slider('Select an integer x', 0, 10, 1)
-y = st.slider('Select an integer y', 0, 10, 1)
-df = pd.DataFrame({'x': [x], 'y': [y] , 'x + y': [x + y]}, index = ['addition row'])
-st.write(df)
+def main():
+    gender=st.selectbox('What is your gender?',[0,1])
+    age=st.number_input('What is your age?',0,100)
+    race=st.selectbox('What is your race/ethnicity?',[1,2])
+    education=st.selectbox('What is your education level?',[1,2])
+    married=st.selectbox('What is your maritial status?',[1,2])
+    income=st.selectbox('What is your income?',[1,2])
+    
+    diagnosis=''
+    
+    if st.button('CKD Risk Result'):
+        diagnosis=cancer_detection([gender,age,smoking,yellow_fingers,anxiety,peer_pressure,chronic_disease,fatigue,allergy,wheezing,alcohol,coughing,shortnessofbreath,swallowing_difficulty,chestpain])
+
+
+    
+    st.success(diagnosis)
+    
 
 #create sidebar
 st.sidebar.title("Pick Your Feature")
