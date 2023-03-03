@@ -34,16 +34,11 @@ def main():
     
 
 #create sidebar
-st.sidebar.title("Pick Your Feature")
+st.sidebar.title("About CKD App")
 
-st.sidebar.subheader("Choose classifier")
-classifier = st.sidebar.selectbox("Classifier", ("Support Vector Machine (SVM)", "Logistic Regression", "Random Forest"))
 
 with st.sidebar:
-    with st.echo():
-        st.write("This code will be printed to the sidebar.")
-        
-        st.write("""
+    st.write("""
             ## About
             The CKD Prediction Tool is..... . 
             
