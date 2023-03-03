@@ -2,6 +2,10 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 import streamlit as st
+import numpy as np
+import pickle
+
+
 
 st.title('Chronic Kidney Disease Prediction')
 
