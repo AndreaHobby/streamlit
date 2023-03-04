@@ -21,7 +21,8 @@ a previous project of mine that uses National Center for Health Statistics (NCHS
 test results will be used. By identifying patterns in the data, models can predict a patient's risk of developing CKD, allowing for early intervention and management.''')
 
 
-loaded_model = pickle.load(open('Trained_DT_model.sav', 'rb'))
+#load data
+#loaded_model = pickle.load(open('Trained_DT_model.sav', 'rb'))
 
 def main():
     gender=st.selectbox('What is your gender?',[0,1])
