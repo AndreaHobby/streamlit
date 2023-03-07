@@ -24,6 +24,8 @@ test results will be used. By identifying patterns in the data, models can predi
 #load data
 #loaded_model = pickle.load(open('Trained_DT_model.sav', 'rb'))
 
+st.checkbox('yes')st.button('Click')st.radio('Pick your gender',['Male','Female'])st.selectbox('Pick your gender',['Male','Female'])st.multiselect('choose a planet',['Jupiter', 'Mars', 'neptune'])st.select_slider('Pick a mark', ['Bad', 'Good', 'Excellent'])st.slider('Pick a number', 0,50)
+    
 def main():
     gender=st.selectbox('What is your gender?',[0,1])
     age=st.number_input('What is your age?',0,100)
@@ -34,8 +36,7 @@ def main():
     
     diagnosis=''
     
-    st.checkbox('yes')st.button('Click')st.radio('Pick your gender',['Male','Female'])st.selectbox('Pick your gender',['Male','Female'])st.multiselect('choose a planet',['Jupiter', 'Mars', 'neptune'])st.select_slider('Pick a mark', ['Bad', 'Good', 'Excellent'])st.slider('Pick a number', 0,50)
-    
+
     if st.button('CKD Risk Result'):
         diagnosis=cancer_detection([gender,age,smoking,yellow_fingers,anxiety,peer_pressure,chronic_disease,fatigue,allergy,wheezing,alcohol,coughing,shortnessofbreath,swallowing_difficulty,chestpain])
 
