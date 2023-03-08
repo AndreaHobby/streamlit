@@ -8,10 +8,7 @@ import os
 
 
 
-st.markdown(
-    '<style> body {background-color: green;}</style>', 
-    unsafe_allow_html=True
-)
+st.markdown('<style>body{background-color: Blue;}</style>',unsafe_allow_html=True)
 
 st.title('Chronic Kidney Disease Prediction')
 
