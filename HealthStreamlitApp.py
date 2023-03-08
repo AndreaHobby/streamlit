@@ -31,14 +31,14 @@ test results will be used. By identifying patterns in the data, models can predi
  
 # Define options for selectboxes
 def main():
- st.subheader('Demographics')   
+ st.text('Demographics')   
  age_options = ["<40", "40-49", "50-59", "60-69", "70+"]
  gender_options = ["Male", "Female"]
  racegrp_options = ["White", "Black", "Hispanic", "Asian", "Other"]
  education_options = ["<High School", "High School/GED", "Some College", "College Graduate"]
  marital_status_options = ["Married", "Widowed", "Divorced", "Separated", "Never Married"]
  income_options = ["<20k", "20-34k", "35-49k", "50-74k", "75-99k", "100k+"]
- st.subheader('Healthcare')  
+ st.text('Healthcare')  
  caresource_options = ["Doctor's Office/Clinic", "Hospital Inpatient", "Emergency Room"]
  health_insurance_options = ["Yes", "No"]
  weight_options = ["Underweight", "Normal", "Overweight", "Obese"]
