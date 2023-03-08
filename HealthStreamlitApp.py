@@ -56,9 +56,18 @@ def main():
  chf_options = ["Yes", "No"]
  anemia_options = ["Yes", "No"]
  
- diagnosis=''
- 
- st.success(diagnosis)
+ # Display selectboxes for each variable
+age = st.selectbox("Age", age_options)
+gender = st.selectbox("Gender", gender_options)
+racegrp = st.selectbox("Racegrp", racegrp_options)
+education = st.selectbox("Education", education_options)
+marital_status = st.selectbox("Marital Status", marital_status_options)
+income = st.selectbox("Income", income_options)
+caresource = st.selectbox("CareSource", caresource_options)
+
+diagnosis=''
+
+st.success(diagnosis)
     
     
 if __name__ == '__main__':
