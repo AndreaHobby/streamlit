@@ -56,6 +56,7 @@ def main():
  chf_options = ["Yes", "No"]
  anemia_options = ["Yes", "No"]
  
+ 
  # Display selectboxes for each variable
 age = st.selectbox("Age", age_options)
 gender = st.selectbox("Gender", gender_options)
@@ -67,6 +68,8 @@ caresource = st.selectbox("CareSource", caresource_options)
 health_insurance = st.selectbox('Health Insurance', health_insurance_options)
 weight = st.selectbox('Weight', weight_options)
 height = st.selectbox('Height', height_options)
+sbp = st.selectbox('SBP', (0, 20, 40, 60, 80, 100))
+dbp = st.selectbox('DBP', (0, 20, 40, 60, 80, 100))
 
 diagnosis=''
 
