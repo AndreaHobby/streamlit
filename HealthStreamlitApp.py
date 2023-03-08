@@ -64,6 +64,9 @@ education = st.selectbox("Education", education_options)
 marital_status = st.selectbox("Marital Status", marital_status_options)
 income = st.selectbox("Income", income_options)
 caresource = st.selectbox("CareSource", caresource_options)
+health_insurance = st.selectbox('Health Insurance', health_insurance_options)
+weight = st.selectbox('Weight', weight_options)
+height = st.selectbox('Height', height_options)
 
 diagnosis=''
 
