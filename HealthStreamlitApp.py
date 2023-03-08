@@ -8,7 +8,7 @@ import os
 
 
 
-st.markdown('<style>body{background-color: Blue;}</style>',unsafe_allow_html=True)
+st.set_page_config(layout='wide', page_title='CKD App', page_icon=icon)
 
 st.title('Chronic Kidney Disease Prediction')
 
