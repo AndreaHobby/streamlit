@@ -35,30 +35,15 @@ def main():
     diagnosis=''
     
 
-    if st.button('CKD Risk Result'):
-        diagnosis=cancer_detection([gender,age,smoking,yellow_fingers,anxiety,peer_pressure,chronic_disease,fatigue,allergy,wheezing,alcohol,coughing,shortnessofbreath,swallowing_difficulty,chestpain])
-
-
+ # Create button to run model
+if st.button("CKD Risk Result"):
+    input_data = [[age]]  # Add more demographic variables...
+    input_data_scaled = scaler.transform(input_data)
+    prediction = model.predict(input_data_scaled)
+    st.write("The predicted kidney disease status is", prediction)
     
     st.success(diagnosis)
     
-    # check if the button is pressed or not
-if(st.button('Calculate BMI')):
- 
-    # print the BMI INDEX
-    st.text("Your BMI Index is {}.".format(bmi))
- 
-    # give the interpretation of BMI index
-    if(bmi < 16):
-        st.error("You are Extremely Underweight")
-    elif(bmi >= 16 and bmi < 18.5):
-        st.warning("You are Underweight")
-    elif(bmi >= 18.5 and bmi < 25):
-        st.success("Healthy")
-    elif(bmi >= 25 and bmi < 30):
-        st.warning("Overweight")
-    elif(bmi >= 30):
-        st.error("Extremely Overweight")
     
     
 if __name__ == '__main__':
