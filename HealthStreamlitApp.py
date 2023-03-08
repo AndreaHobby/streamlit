@@ -37,17 +37,17 @@ def main():
     
     st.success(diagnosis)
     
- # Create button to run model
-if st.button("CKD Risk Result"):
-    input_data = [[age]]  # Add more demographic variables...
-    input_data_scaled = scaler.transform(input_data)
-    prediction = model.predict(input_data_scaled)
-    st.write("The predicted kidney disease status is", prediction)    
+
     
 if __name__ == '__main__':
     main()
     
-    
+   # Create button to run model
+if st.button("CKD Risk Result"):
+    input_data = [[age]]  # Add more demographic variables...
+    input_data_scaled = scaler.transform(input_data)
+    prediction = model.predict(input_data_scaled)
+    st.write("The predicted kidney disease status is", prediction)      
 
 #create sidebar
 st.sidebar.title("About CKD App")
