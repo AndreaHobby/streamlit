@@ -63,7 +63,7 @@ fam_hypertension_options = ["Yes", "No"]
 fam_diabetes_options = ["Yes", "No"]
 fam_cvd_options = ["Yes", "No"]
  
-st.text('Demographics')   
+st.subheader('Demographics')   
 age = st.selectbox("Age", age_options)
 gender = st.selectbox("Gender", gender_options)
 racegrp = st.selectbox("Racegrp", racegrp_options)
@@ -71,7 +71,7 @@ education = st.selectbox("Education", education_options)
 marital_status = st.selectbox("Marital Status", marital_status_options)
 income = st.selectbox("Income", income_options)
  
-st.text('Healthcare') 
+st.subheader('Healthcare') 
 caresource = st.selectbox("CareSource", caresource_options)
 health_insurance = st.selectbox('Health Insurance', health_insurance_options)
 weight = st.selectbox('Weight', weight_options)
@@ -93,13 +93,11 @@ CVD = st.selectbox('CVD', [0, 1])
 CHF = st.selectbox('CHF', [0, 1])
 Anemia = st.selectbox('Anemia', [0, 1])
 
-st.text('Family History') 
+st.subheader('Family History') 
 Fam_Hypertension = st.selectbox('Fam Hypertension', [0, 1])
 Fam_Diabetes = st.selectbox('Fam Diabetes', [0, 1])
 Fam_CVD = st.selectbox('Fam CVD', [0, 1])
  
-
-
 
    # Create button to run model
 if st.button("CKD Risk Result"):
