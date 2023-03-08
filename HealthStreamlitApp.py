@@ -38,6 +38,9 @@ def main():
  education_options = ["<High School", "High School/GED", "Some College", "College Graduate"]
  marital_status_options = ["Married", "Widowed", "Divorced", "Separated", "Never Married"]
  income_options = ["<20k", "20-34k", "35-49k", "50-74k", "75-99k", "100k+"]
+
+
+def main():
  st.text('Healthcare')  
  caresource_options = ["Doctor's Office/Clinic", "Hospital Inpatient", "Emergency Room"]
  health_insurance_options = ["Yes", "No"]
@@ -91,6 +94,7 @@ def main():
  Fam_CVD = st.selectbox('Fam CVD', [0, 1])
  CHF = st.selectbox('CHF', [0, 1])
  Anemia = st.selectbox('Anemia', [0, 1])
+
 
 diagnosis=''
 
