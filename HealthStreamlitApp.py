@@ -8,7 +8,7 @@ import os
 
 
 
-st.set_page_config(page_title="My Streamlit App", page_icon=":smiley:", layout="wide", backgroundColor="green")
+st.set_page_config(page_title="My Streamlit App", layout="wide", backgroundColor="green")
 
 
 st.title('Chronic Kidney Disease Prediction')
