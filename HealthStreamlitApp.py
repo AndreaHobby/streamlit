@@ -55,8 +55,8 @@ def main():
  fam_cvd_options = ["Yes", "No"]
  chf_options = ["Yes", "No"]
  anemia_options = ["Yes", "No"]
-    
-    diagnosis=''
+ 
+ diagnosis=''
     
     
     st.success(diagnosis)
