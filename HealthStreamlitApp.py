@@ -8,8 +8,10 @@ import os
 
 
 
-st.set_page_config(page_title="My Streamlit App", layout="wide", backgroundColor="green")
-
+st.markdown(
+    '<style> body {background-color: green;}</style>', 
+    unsafe_allow_html=True
+)
 
 st.title('Chronic Kidney Disease Prediction')
 
