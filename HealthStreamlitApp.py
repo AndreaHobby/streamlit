@@ -11,10 +11,10 @@ st.markdown(
     f"""
     <style>
         .reportview-container {{
-            background-color: green;
+            background-color: #5cb85c;
         }}
         .sidebar .sidebar-content {{
-            background-color: #f9f9f9;
+            background-color: #5cb85c;
         }}
     </style>
     """,
