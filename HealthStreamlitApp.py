@@ -11,7 +11,7 @@ st.markdown(
     f"""
     <style>
         .reportview-container {{
-            background-color: #f9f9f9;
+            background-color: green;
         }}
         .sidebar .sidebar-content {{
             background-color: #f9f9f9;
