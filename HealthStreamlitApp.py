@@ -29,67 +29,75 @@ test results will be used. By identifying patterns in the data, models can predi
 #loaded_model = pickle.load(open('Trained_DT_model.sav', 'rb'))
  
 # Define options for selectboxes
- st.text('Demographics')   
- age_options = ["<40", "40-49", "50-59", "60-69", "70+"]
- gender_options = ["Male", "Female"]
- racegrp_options = ["White", "Black", "Hispanic", "Asian", "Other"]
- education_options = ["<High School", "High School/GED", "Some College", "College Graduate"]
- marital_status_options = ["Married", "Widowed", "Divorced", "Separated", "Never Married"]
- income_options = ["<20k", "20-34k", "35-49k", "50-74k", "75-99k", "100k+"]
+
+age_options = ["<40", "40-49", "50-59", "60-69", "70+"]
+gender_options = ["Male", "Female"]
+racegrp_options = ["White", "Black", "Hispanic", "Asian", "Other"]
+education_options = ["<High School", "High School/GED", "Some College", "College Graduate"]
+marital_status_options = ["Married", "Widowed", "Divorced", "Separated", "Never Married"]
+income_options = ["<20k", "20-34k", "35-49k", "50-74k", "75-99k", "100k+"]
  
- st.text('Healthcare')   
- caresource_options = ["Doctor's Office/Clinic", "Hospital Inpatient", "Emergency Room"]
- health_insurance_options = ["Yes", "No"]
- weight_options = ["Underweight", "Normal", "Overweight", "Obese"]
- height_options = ["<5ft", "5ft-5ft5in", "5ft5in-6ft", ">6ft"]
- sbp_options = ["<120", "120-129", "130-139", "140-149", "150+"]
- dbp_options = ["<80", "80-84", "85-89", "90-99", "100+"]
- hdl_options = ["<40", "40-49", "50-59", "60+"]
- ldl_options = ["<100", "100-129", "130-159", "160-189", "190+"]
- total_chol_options = ["<200", "200-239", "240-279", "280+"]
- dyslipidemia_options = ["Yes", "No"]
- pvd_options = ["Yes", "No"]
- activity_options = ["Inactive", "Moderately Active", "Active"]
- poor_vision_options = ["Yes", "No"]
- smoker_options = ["Current Smoker", "Former Smoker", "Never Smoked"]
- hypertension_options = ["Yes", "No"]
- fam_hypertension_options = ["Yes", "No"]
- diabetes_options = ["Yes", "No"]
- fam_diabetes_options = ["Yes", "No"]
- stroke_options = ["Yes", "No"]
- cvd_options = ["Yes", "No"]
- fam_cvd_options = ["Yes", "No"]
- chf_options = ["Yes", "No"]
- anemia_options = ["Yes", "No"]
- age = st.selectbox("Age", age_options)
- gender = st.selectbox("Gender", gender_options)
- racegrp = st.selectbox("Racegrp", racegrp_options)
- education = st.selectbox("Education", education_options)
- marital_status = st.selectbox("Marital Status", marital_status_options)
- income = st.selectbox("Income", income_options)
- caresource = st.selectbox("CareSource", caresource_options)
- health_insurance = st.selectbox('Health Insurance', health_insurance_options)
- weight = st.selectbox('Weight', weight_options)
- height = st.selectbox('Height', height_options)
- sbp = st.selectbox('SBP', (0, 20, 40, 60, 80, 100))
- dbp = st.selectbox('DBP', (0, 20, 40, 60, 80, 100))
- HDL = st.selectbox('HDL', [0, 1, 2, 3])
- LDL = st.selectbox('LDL', [0, 1, 2, 3])
- Total_Cholesterol = st.selectbox('Total Cholesterol', [0, 1, 2, 3])
- Dyslipidemia = st.selectbox('Dyslipidemia', [0, 1])
- PVD = st.selectbox('PVD', [0, 1])
- Activity = st.selectbox('Activity', [0, 1, 2])
- Poor_Vision = st.selectbox('Poor Vision', [0, 1])
- Smoker = st.selectbox('Smoker', [0, 1])
- Hypertension = st.selectbox('Hypertension', [0, 1])
- Fam_Hypertension = st.selectbox('Fam Hypertension', [0, 1])
- Diabetes = st.selectbox('Diabetes', [0, 1])
- Fam_Diabetes = st.selectbox('Fam Diabetes', [0, 1])
- Stroke = st.selectbox('Stroke', [0, 1])
- CVD = st.selectbox('CVD', [0, 1])
- Fam_CVD = st.selectbox('Fam CVD', [0, 1])
- CHF = st.selectbox('CHF', [0, 1])
- Anemia = st.selectbox('Anemia', [0, 1])
+  
+caresource_options = ["Doctor's Office/Clinic", "Hospital Inpatient", "Emergency Room"]
+health_insurance_options = ["Yes", "No"]
+weight_options = ["Underweight", "Normal", "Overweight", "Obese"]
+height_options = ["<5ft", "5ft-5ft5in", "5ft5in-6ft", ">6ft"]
+sbp_options = ["<120", "120-129", "130-139", "140-149", "150+"]
+dbp_options = ["<80", "80-84", "85-89", "90-99", "100+"]
+hdl_options = ["<40", "40-49", "50-59", "60+"]
+ldl_options = ["<100", "100-129", "130-159", "160-189", "190+"]
+total_chol_options = ["<200", "200-239", "240-279", "280+"]
+dyslipidemia_options = ["Yes", "No"]
+pvd_options = ["Yes", "No"]
+activity_options = ["Inactive", "Moderately Active", "Active"]
+poor_vision_options = ["Yes", "No"]
+smoker_options = ["Current Smoker", "Former Smoker", "Never Smoked"]
+hypertension_options = ["Yes", "No"]
+diabetes_options = ["Yes", "No"]
+stroke_options = ["Yes", "No"]
+cvd_options = ["Yes", "No"]
+chf_options = ["Yes", "No"]
+anemia_options = ["Yes", "No"]
+ 
+fam_hypertension_options = ["Yes", "No"]
+fam_diabetes_options = ["Yes", "No"]
+fam_cvd_options = ["Yes", "No"]
+ 
+st.text('Demographics')   
+age = st.selectbox("Age", age_options)
+gender = st.selectbox("Gender", gender_options)
+racegrp = st.selectbox("Racegrp", racegrp_options)
+education = st.selectbox("Education", education_options)
+marital_status = st.selectbox("Marital Status", marital_status_options)
+income = st.selectbox("Income", income_options)
+ 
+st.text('Healthcare') 
+caresource = st.selectbox("CareSource", caresource_options)
+health_insurance = st.selectbox('Health Insurance', health_insurance_options)
+weight = st.selectbox('Weight', weight_options)
+height = st.selectbox('Height', height_options)
+sbp = st.selectbox('SBP', (0, 20, 40, 60, 80, 100))
+dbp = st.selectbox('DBP', (0, 20, 40, 60, 80, 100))
+HDL = st.selectbox('HDL', [0, 1, 2, 3])
+LDL = st.selectbox('LDL', [0, 1, 2, 3])
+Total_Cholesterol = st.selectbox('Total Cholesterol', [0, 1, 2, 3])
+Dyslipidemia = st.selectbox('Dyslipidemia', [0, 1])
+PVD = st.selectbox('PVD', [0, 1])
+Activity = st.selectbox('Activity', [0, 1, 2])
+Poor_Vision = st.selectbox('Poor Vision', [0, 1])
+Smoker = st.selectbox('Smoker', [0, 1])
+Hypertension = st.selectbox('Hypertension', [0, 1])
+Diabetes = st.selectbox('Diabetes', [0, 1])
+Stroke = st.selectbox('Stroke', [0, 1])
+CVD = st.selectbox('CVD', [0, 1])
+CHF = st.selectbox('CHF', [0, 1])
+Anemia = st.selectbox('Anemia', [0, 1])
+
+st.text('Family History') 
+Fam_Hypertension = st.selectbox('Fam Hypertension', [0, 1])
+Fam_Diabetes = st.selectbox('Fam Diabetes', [0, 1])
+Fam_CVD = st.selectbox('Fam CVD', [0, 1])
+ 
 
 
 
