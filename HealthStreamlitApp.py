@@ -7,6 +7,19 @@ import pickle
 import os 
 
 
+st.markdown(
+    f"""
+    <style>
+        .reportview-container {{
+            background-color: #f9f9f9;
+        }}
+        .sidebar .sidebar-content {{
+            background-color: #f9f9f9;
+        }}
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 st.title('Chronic Kidney Disease Prediction')
 
