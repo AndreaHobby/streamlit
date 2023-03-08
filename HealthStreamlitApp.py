@@ -29,7 +29,6 @@ test results will be used. By identifying patterns in the data, models can predi
 #loaded_model = pickle.load(open('Trained_DT_model.sav', 'rb'))
  
 # Define options for selectboxes
-def main():
  st.text('Demographics')   
  age_options = ["<40", "40-49", "50-59", "60-69", "70+"]
  gender_options = ["Male", "Female"]
@@ -37,6 +36,8 @@ def main():
  education_options = ["<High School", "High School/GED", "Some College", "College Graduate"]
  marital_status_options = ["Married", "Widowed", "Divorced", "Separated", "Never Married"]
  income_options = ["<20k", "20-34k", "35-49k", "50-74k", "75-99k", "100k+"]
+ 
+ st.text('Healthcare')   
  caresource_options = ["Doctor's Office/Clinic", "Hospital Inpatient", "Emergency Room"]
  health_insurance_options = ["Yes", "No"]
  weight_options = ["Underweight", "Normal", "Overweight", "Obese"]
@@ -91,14 +92,7 @@ def main():
  Anemia = st.selectbox('Anemia', [0, 1])
 
 
-diagnosis=''
 
-st.success(diagnosis)
-    
-    
-if __name__ == '__main__':
-    main()
-    
    # Create button to run model
 if st.button("CKD Risk Result"):
     #input_data = [[Age, Gender, Racegrp, Education, Marital status, Income, CareSource, health Insure, weight, Height, SBP,  DBP, HDL, LDL, Total Chol, Dyslipidemia, PVD , Activity, PoorVision, Smoker, Hypertension, Fam Hypertension, Diabetes, Fam Diabetes, Stroke, CVD, Fam CVD, CHF, Anemia]]  # Add more demographic variables...
