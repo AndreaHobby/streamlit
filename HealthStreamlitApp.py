@@ -6,7 +6,7 @@ import numpy as np
 import pickle
 import os 
 
-
+st.set_page_config(layout='wide', page_title='CKD App')
 
 
 
@@ -16,7 +16,7 @@ st.title('Chronic Kidney Disease Prediction')
 image = Image.open('./image/fnalkidney-comp_1087848275.png')
 st.image(image, caption='Kidney')
 
-st.set_page_config(layout='wide', page_title='CKD App')
+
 
 st.write('''Chronic kidney disease (CKD) is when the kidneys are damaged and cannot correctly filter waste and excess fluids from the blood. 
 About 37 million people in the United States have Chronic Kidney Disease (CKD). Early detection and diagnosis of CKD are essential to
