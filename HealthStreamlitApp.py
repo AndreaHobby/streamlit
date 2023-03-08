@@ -7,19 +7,9 @@ import pickle
 import os 
 
 
-st.markdown(
-    f"""
-    <style>
-        .reportview-container {{
-            background-color: #5cb85c;
-        }}
-        .sidebar .sidebar-content {{
-            background-color: #5cb85c;
-        }}
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
+
+st.set_page_config(page_title="My Streamlit App", page_icon=":smiley:", layout="wide", initial_sidebar_state="expanded", backgroundColor="green")
+
 
 st.title('Chronic Kidney Disease Prediction')
 
