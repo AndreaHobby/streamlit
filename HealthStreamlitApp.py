@@ -25,12 +25,36 @@ test results will be used. By identifying patterns in the data, models can predi
 #loaded_model = pickle.load(open('Trained_DT_model.sav', 'rb'))
  
 def main():
-    gender=st.selectbox('What is your gender?',[0,1])
-    age=st.number_input('What is your age?',0,100)
-    race=st.selectbox('What is your race/ethnicity?',[1,2])
-    education=st.selectbox('What is your education level?',[1,2])
-    married=st.selectbox('What is your maritial status?',[1,2])
-    income=st.selectbox('What is your income?',[1,2])
+# Define options for selectboxes
+age_options = ["<40", "40-49", "50-59", "60-69", "70+"]
+gender_options = ["Male", "Female"]
+racegrp_options = ["White", "Black", "Hispanic", "Asian", "Other"]
+education_options = ["<High School", "High School/GED", "Some College", "College Graduate"]
+marital_status_options = ["Married", "Widowed", "Divorced", "Separated", "Never Married"]
+income_options = ["<20k", "20-34k", "35-49k", "50-74k", "75-99k", "100k+"]
+caresource_options = ["Doctor's Office/Clinic", "Hospital Inpatient", "Emergency Room"]
+health_insurance_options = ["Yes", "No"]
+weight_options = ["Underweight", "Normal", "Overweight", "Obese"]
+height_options = ["<5ft", "5ft-5ft5in", "5ft5in-6ft", ">6ft"]
+sbp_options = ["<120", "120-129", "130-139", "140-149", "150+"]
+dbp_options = ["<80", "80-84", "85-89", "90-99", "100+"]
+hdl_options = ["<40", "40-49", "50-59", "60+"]
+ldl_options = ["<100", "100-129", "130-159", "160-189", "190+"]
+total_chol_options = ["<200", "200-239", "240-279", "280+"]
+dyslipidemia_options = ["Yes", "No"]
+pvd_options = ["Yes", "No"]
+activity_options = ["Inactive", "Moderately Active", "Active"]
+poor_vision_options = ["Yes", "No"]
+smoker_options = ["Current Smoker", "Former Smoker", "Never Smoked"]
+hypertension_options = ["Yes", "No"]
+fam_hypertension_options = ["Yes", "No"]
+diabetes_options = ["Yes", "No"]
+fam_diabetes_options = ["Yes", "No"]
+stroke_options = ["Yes", "No"]
+cvd_options = ["Yes", "No"]
+fam_cvd_options = ["Yes", "No"]
+chf_options = ["Yes", "No"]
+anemia_options = ["Yes", "No"]
     
     diagnosis=''
     
