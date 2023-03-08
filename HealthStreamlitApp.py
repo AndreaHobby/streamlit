@@ -57,9 +57,8 @@ def main():
  anemia_options = ["Yes", "No"]
  
  diagnosis=''
-    
-    
-    st.success(diagnosis)
+ 
+ st.success(diagnosis)
     
 
     
