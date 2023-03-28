@@ -84,7 +84,7 @@ def get_options():
         "hypertension": hypertension_options,
         "diabetes": diabetes_options
     }
-     return options 
+    return options 
 
  
 
