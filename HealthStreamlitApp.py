@@ -83,6 +83,7 @@ def get_options():
         "smoker": smoker_options,
         "hypertension": hypertension_options,
         "diabetes": diabetes_options
+    }
      return options 
 
  
