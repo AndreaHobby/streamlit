@@ -57,7 +57,7 @@ fam_hypertension_options = ["Yes", "No"]
 fam_diabetes_options = ["Yes", "No"]
 fam_cvd_options = ["Yes", "No"]
 
-options = {
+
 "age": age_options,
 "gender": gender_options,
 "racegrp": racegrp_options,
@@ -80,7 +80,7 @@ options = {
 "smoker": smoker_options,
 "hypertension": hypertension_options,
 "diabetes": diabetes_options
-}
+
 
 
 
