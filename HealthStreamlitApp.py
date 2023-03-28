@@ -78,7 +78,11 @@ caresource = st.selectbox("Where do you usually receive you healthcare?", careso
 health_insurance = st.selectbox('Do you have health insurance?', health_insurance_options)
 weight = st.selectbox('What is your Weight?', weight_options)
 height = st.selectbox('What is your Height?', height_options)
-sbp = st.selectbox('What is your systolic blood pressure?', sbp_options)
+sbp = st.selectbox('What is your systolic blood pressure? Normal: Below 120/80.
+Elevated: 120 to 129/less than 80.
+Stage 1 high blood pressure: 130 to 139/80 to 89.
+Stage 2 high blood pressure: 140 and above/90 and above.
+Hypertension crisis: above 180/above 120.', sbp_options)
 dbp = st.selectbox('What is your diastolic blood pressure?', dbp_options)
 HDL = st.selectbox('What is your HDL?', hdl_options)
 LDL = st.selectbox('What is your LDL?', ldl_options)
