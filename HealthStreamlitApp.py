@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 import numpy as np
-import pickle
+import pickle as pkl
 import os 
 import sklearn
-
+import gzip, pickletools
 
 
 st.set_page_config(layout='wide', page_title='CKD App')
@@ -28,7 +28,14 @@ test results will be used. By identifying patterns in the data, models can predi
 
 
 #load model
-model = pickle.load(open('model.sav', 'rb'))
+@st.cache(allow_output_mutation=True)
+def load_model():
+    with gzip.open(filepath, 'rb') as f:
+        p = pkl.Unpickler(f)
+        model = p.load()
+        return model
+
+model =  load_model()   
  
 # Define options for selectboxes
 
