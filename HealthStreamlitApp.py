@@ -75,7 +75,7 @@ income = st.selectbox("Income", income_options)
  
 st.subheader('Healthcare') 
 caresource = st.selectbox("Where do you usually receive you healthcare?", caresource_options)
-health_insurance = st.selectbox('What Health Insurance do you have?', health_insurance_options)
+health_insurance = st.selectbox('Do you have health insurance?', health_insurance_options)
 weight = st.selectbox('What is your Weight?', weight_options)
 height = st.selectbox('What is your Height?', height_options)
 sbp = st.selectbox('What is your Systtolic Blood Pressure', sbp_options)
