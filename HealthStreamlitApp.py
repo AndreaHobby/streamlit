@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
-import streamlit as st
 import numpy as np
 import pickle
 import os 
@@ -80,7 +79,7 @@ def get_options():
         "smoker": smoker_options,
         "hypertension": hypertension_options,
         "diabetes": diabetes_options
-     return 
+     return options 
 
  
 
