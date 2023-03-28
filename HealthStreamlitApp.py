@@ -28,15 +28,7 @@ test results will be used. By identifying patterns in the data, models can predi
 
 
 #load model
-filepath = "model.pkl"
-@st.cache(allow_output_mutation=True)
-def load_model():
-    with gzip.open(filepath, 'rb') as f:
-        p = pkl.Unpickler(f)
-        model = p.load()
-        return model
-
-model =  load_model()   
+model = pickle.load(open('model.sav', 'rb'))
  
 # Define options for selectboxes
 
