@@ -98,6 +98,8 @@ Fam_Hypertension = st.selectbox('Fam Hypertension', fam_hypertension_options)
 Fam_Diabetes = st.selectbox('Fam Diabetes', fam_diabetes_options)
 Fam_CVD = st.selectbox('Fam CVD', fam_cvd_options)
 
+# define diagnosis variable and set it to a string value
+diagnosis = "CKD"
 
    # Create button to run model
 if st.button("CKD Risk Result"):
