@@ -27,8 +27,8 @@ a previous project of mine that uses National Center for Health Statistics (NCHS
 test results will be used. By identifying patterns in the data, models can predict a patient's risk of developing CKD, allowing for early intervention and management.''')
 
 
-#load data
-loaded_model = pickle.load(open('model.sav', 'rb'))
+#load model
+model = pickle.load(open('model.sav', 'rb'))
  
 # Define options for selectboxes
 
