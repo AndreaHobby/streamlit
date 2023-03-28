@@ -34,11 +34,18 @@ model = pickle.load(open('model.pkl', 'rb'))
 # Define options for selectboxes
 
 age_options = ["<40", "40-49", "50-59", "60-69", "70+"]
+age_options_float = list(map(float, age_options))
+
 gender_options = ["Male", "Female"]
+gender_float = list(map(lambda x: float(1.0) if x == "Male" else float(0.0), gender_options))
+
 racegrp_options = ["White", "Black", "Hispanic", "Asian", "Other"]
 education_options = ["<High School", "High School/GED", "Some College", "College Graduate"]
 marital_status_options = ["Married", "Widowed", "Divorced", "Separated", "Never Married"]
+
 income_options = ["<20k", "20-34k", "35-49k", "50-74k", "75-99k", "100k+"]
+income_options_float = list(map(float, [i[:-1] for i in income_options]))
+
  
   
 caresource_options = ["Doctor's Office/Clinic", "Hospital Inpatient", "Emergency Room"]
@@ -151,35 +158,35 @@ diagnosis = "Unknown"
 
 # Create button to run model
 if st.button("CKD Risk Result"):
-    input_data = [age,
-gender,
-racegrp,
-education,
-marital_status,
-income,
-caresource,
-health_insurance,
-weight,
-height,
-sbp,
-dbp,
-HDL,
-LDL,
-Total_Cholesterol,
-Dyslipidemia,
-PVD,
-Activity,
-Poor_Vision,
-Smoker,
-Hypertension,
-Diabetes,
-Stroke,
-CVD,
-CHF,
-Anemia,
-Fam_Hypertension,
-Fam_Diabetes,
-Fam_CVD]  
+    input_data = [age_float,
+gender_float,
+racegrp_float,
+education_float,
+marital_status_float,
+income_float,
+caresource_float,
+health_insurance_float,
+weight_float,
+height_float,
+sbp_float,
+dbp_float,
+HDL_float,
+LDL_float,
+Total_Cholesterol_float,
+Dyslipidemia_float,
+PVD_float,
+Activity_float,
+Poor_Vision_float,
+Smoker_float,
+Hypertension_float,
+Diabetes_float,
+Stroke_float,
+CVD_float,
+CHF_float,
+Anemia_float,
+Fam_Hypertension_float,
+Fam_Diabetes_float,
+Fam_CVD_float]  
     prediction = model.predict(input_data)
 
     # set the diagnosis based on the prediction result
