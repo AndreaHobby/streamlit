@@ -32,8 +32,65 @@ test results will be used. By identifying patterns in the data, models can predi
 model = pickle.load(open('model.pkl', 'rb'))
 
 # Define options for selectboxes
+age_options = ["<40", "40-49", "50-59", "60-69", "70+"]
+age_float = list(map(float, [i[:-1] for i in age_options]))
 
+gender_options = ["Male", "Female"]
+gender_float = list(map(lambda x: float(1.0) if x == "Male" else float(0.0), gender_options))
 
+racegrp_options = ["White", "Black", "Hispanic", "Asian", "Other"]
+racegrp_float = list(map(float, [i[:-1] for i in racegrp_options]))
+
+education_options = ["<High School", "High School/GED", "Some College", "College Graduate"]
+education_float = list(map(float, [i[:-1] for i in education_options]))
+
+marital_status_options = ["Married", "Widowed", "Divorced", "Separated", "Never Married"]
+marital_status_float = list(map(float, [i[:-1] for i in marital_status_options]))
+
+income_options = ["<20k", "20-34k", "35-49k", "50-74k", "75-99k", "100k+"]
+income_float = list(map(float, [i[:-1] for i in income_options]))
+
+caresource_options = ["Doctor's Office/Clinic", "Hospital Inpatient", "Emergency Room"]
+caresource_float = list(map(float, range(len(caresource_options))))
+
+health_insurance_options = ["Yes", "No"]
+health_insurance_float = list(map(float, range(len(health_insurance_options))))
+
+weight_options = ["Underweight", "Normal", "Overweight", "Obese"]
+weight_float = list(map(float, range(len(weight_options))))
+
+height_options = ["<5ft", "5ft-5ft5in", "5ft5in-6ft", ">6ft"]
+height_float = list(map(float, range(len(height_options))))
+
+sbp_options = ["<120", "120-129", "130-139", "140-149", "150+"]
+sbp_float = list(map(float, range(len(sbp_options))))
+
+dbp_options = ["<80", "80-84", "85-89", "90-99", "100+"]
+dbp_float = list(map(float, range(len(dbp_options))))
+
+hdl_options = ["<40", "40-49", "50-59", "60+"]
+hdl_float = list(map(float, range(len(hdl_options))))
+
+ldl_options = ["<100", "100-129", "130-159", "160-189", "190+"]
+ldl_float = list(map(float, range(len(ldl_options))))
+
+total_chol_options = ["<200", "200-239", "240-279", "280+"]
+total_chol_float = list(map(float, range(len(total_chol_options))))
+
+dyslipidemia_options = ["Yes", "No"]
+dyslipidemia_float = list(map(float, range(len(dyslipidemia_options))))
+
+pvd_options = ["Yes", "No"]
+pvd_float = list(map(float, range(len(pvd_options))))
+
+activity_options = ["Inactive", "Moderately Active", "Active"]
+activity_float = list(map(float, range(len(activity_options))))
+
+poor_vision_options = ["Yes", "No"]
+poor_vision_float = list(map(float, range(len(poor_vision_options))))
+
+smoker_options = ["Current Smoker", "Former Smoker", "Never Smoked"]
+smoker_float = list(map(float, range(len(smoker_options))))
 
 hypertension_options = ["Yes", "No"]
 hypertension_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), hypertension_options))
@@ -52,7 +109,7 @@ chf_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), chf_opt
 
 anemia_options = ["Yes", "No"]
 anemia_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), anemia_options))
-
+ 
 fam_hypertension_options = ["Yes", "No"]
 fam_hypertension_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), fam_hypertension_options))
 
