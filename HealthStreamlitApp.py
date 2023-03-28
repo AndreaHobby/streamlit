@@ -5,6 +5,8 @@ import streamlit as st
 import numpy as np
 import pickle
 import os 
+from sklearn.preprocessing import StandardScaler
+
 
 st.set_page_config(layout='wide', page_title='CKD App')
 
