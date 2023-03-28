@@ -25,8 +25,8 @@ test results will be used. By identifying patterns in the data, models can predi
 
 
 #load the model from disk
-import joblib
-model = joblib.load(r"model.sav")
+#import joblib
+#model = joblib.load(r"model.sav")
  
 # Define options for selectboxes
 
