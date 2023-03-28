@@ -5,6 +5,7 @@ import streamlit as st
 import numpy as np
 import pickle
 import os 
+!pip install scikit-learn
 from sklearn.preprocessing import StandardScaler
 
 
