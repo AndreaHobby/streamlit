@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
-import streamlit as st
 import numpy as np
 import pickle
 import os 
@@ -28,7 +27,7 @@ test results will be used. By identifying patterns in the data, models can predi
 
 
 #load model
-model = pickle.load(open('/model.sav', 'rb'))
+model = pickle.load(open('model.sav', 'rb'))
  
 # Define options for selectboxes
 
