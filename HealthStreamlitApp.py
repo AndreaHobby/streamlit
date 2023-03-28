@@ -30,7 +30,7 @@ model = joblib.load(r"model.sav")
  
 # Define options for selectboxes
 
-def get_options():
+
   
     careource_options = ["Doctor's Office/Clinic", "Hospital Inpatient", "Emergency Room"]
     health_insurance_options = ["Yes", "No"]
@@ -81,7 +81,7 @@ def get_options():
         "hypertension": hypertension_options,
         "diabetes": diabetes_options
     }
-    return options 
+
 
  
 
