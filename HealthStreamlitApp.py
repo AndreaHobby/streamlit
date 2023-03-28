@@ -86,15 +86,15 @@ diagnosis = "Unknown"
 # Create button to run model
 if st.button("CKD Risk Result"):
     input_data = [
-Hypertension_float,
-Diabetes_float,
-Stroke_float,
-CVD_float,
-CHF_float,
-Anemia_float,
-Fam_Hypertension_float,
-Fam_Diabetes_float,
-Fam_CVD_float]
+hypertension_float,
+diabetes_float,
+stroke_float,
+cvd_float,
+chf_float,
+anemia_float,
+fam_hypertension_float,
+fam_diabetes_float,
+fam_cvd_float]
     prediction = model.predict(input_data)
 
     # set the diagnosis based on the prediction result
