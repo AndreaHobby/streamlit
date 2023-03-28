@@ -5,8 +5,7 @@ import streamlit as st
 import numpy as np
 import pickle
 import os 
-!pip install scikit-learn
-from sklearn.preprocessing import StandardScaler
+
 
 
 st.set_page_config(layout='wide', page_title='CKD App')
@@ -29,7 +28,7 @@ test results will be used. By identifying patterns in the data, models can predi
 
 
 #load data
-#loaded_model = pickle.load(open('Trained_DT_model.sav', 'rb'))
+loaded_model = pickle.load(open('model.sav', 'rb'))
  
 # Define options for selectboxes
 
@@ -136,8 +135,7 @@ anemia_options,
 fam_hypertension_options,
 fam_diabetes_options,
 fam_cvd_options]]  
-    input_data_scaled = scaler.transform(input_data)
-    prediction = model.predict(input_data_scaled)
+    prediction = model.predict(input_data)
 
     # set the diagnosis based on the prediction result
     if prediction == 1:
