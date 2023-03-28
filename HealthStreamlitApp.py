@@ -98,15 +98,24 @@ Fam_Hypertension = st.selectbox('Fam Hypertension', fam_hypertension_options)
 Fam_Diabetes = st.selectbox('Fam Diabetes', fam_diabetes_options)
 Fam_CVD = st.selectbox('Fam CVD', fam_cvd_options)
 
-# define diagnosis variable and set it to a string value
-diagnosis = "CKD"
 
-   # Create button to run model
+# define diagnosis variable and set it to a default value
+diagnosis = "Unknown"
+
+# Create button to run model
 if st.button("CKD Risk Result"):
-    #input_data = [[Age, Gender, Racegrp, Education, Marital status, Income, CareSource, health Insure, weight, Height, SBP,  DBP, HDL, LDL, Total Chol, Dyslipidemia, PVD , Activity, PoorVision, Smoker, Hypertension, Fam Hypertension, Diabetes, Fam Diabetes, Stroke, CVD, Fam CVD, CHF, Anemia]]  # Add more demographic variables...
-    #input_data_scaled = scaler.transform(input_data)
-    #prediction = model.predict(input_data_scaled)
-    st.write("The predicted kidney disease status is", diagnosis)      #change to prediction
+    input_data = [[Age, Gender, Racegrp, Education, Marital status, Income, CareSource, health Insure, weight, Height, SBP,  DBP, HDL, LDL, Total Chol, Dyslipidemia, PVD , Activity, PoorVision, Smoker, Hypertension, Fam Hypertension, Diabetes, Fam Diabetes, Stroke, CVD, Fam CVD, CHF, Anemia]]  # Add more demographic variables...
+    input_data_scaled = scaler.transform(input_data)
+    prediction = model.predict(input_data_scaled)
+
+    # set the diagnosis based on the prediction result
+    if prediction == 1:
+        diagnosis = "CKD"
+    else:
+        diagnosis = "No CKD"
+
+    st.write("The predicted kidney disease status is", diagnosis)
+
 
 #create sidebar
 st.sidebar.title("About CKD App")
