@@ -34,14 +34,19 @@ model = pickle.load(open('model.pkl', 'rb'))
 # Define options for selectboxes
 
 age_options = ["<40", "40-49", "50-59", "60-69", "70+"]
-age_float = list(map(float, age_options))
+age_float = list(map(float, [i[:-1] for i in age_options]))
 
 gender_options = ["Male", "Female"]
 gender_float = list(map(lambda x: float(1.0) if x == "Male" else float(0.0), gender_options))
 
 racegrp_options = ["White", "Black", "Hispanic", "Asian", "Other"]
+racegrp_float = list(map(float, [i[:-1] for i in racegrp_options]))
+
 education_options = ["<High School", "High School/GED", "Some College", "College Graduate"]
+education_float = list(map(float, [i[:-1] for i in education_options]))
+
 marital_status_options = ["Married", "Widowed", "Divorced", "Separated", "Never Married"]
+marital_status_float = list(map(float, [i[:-1] for i in marital_status_options]))
 
 income_options = ["<20k", "20-34k", "35-49k", "50-74k", "75-99k", "100k+"]
 income_float = list(map(float, [i[:-1] for i in income_options]))
