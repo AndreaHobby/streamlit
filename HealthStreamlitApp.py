@@ -5,7 +5,7 @@ import numpy as np
 import pickle as pkl
 import os 
 import sklearn
-import gzip, pickletools
+
 
 
 st.set_page_config(layout='wide', page_title='CKD App')
