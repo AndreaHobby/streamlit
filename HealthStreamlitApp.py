@@ -104,7 +104,7 @@ diagnosis = "Unknown"
 
 # Create button to run model
 if st.button("CKD Risk Result"):
-    input_data = [[Age, Gender, Racegrp, Education, Marital status, Income, CareSource, health Insure, weight, Height, SBP,  DBP, HDL, LDL, Total Chol, Dyslipidemia, PVD , Activity, PoorVision, Smoker, Hypertension, Fam Hypertension, Diabetes, Fam Diabetes, Stroke, CVD, Fam CVD, CHF, Anemia]]  # Add more demographic variables...
+    input_data = [[Age, Gender, Racegrp, Education, marital_status, Income, CareSource, health Insure, weight, Height, SBP,  DBP, HDL, LDL, Total Chol, Dyslipidemia, PVD , Activity, PoorVision, Smoker, Hypertension, Fam Hypertension, Diabetes, Fam Diabetes, Stroke, CVD, Fam CVD, CHF, Anemia]]  # Add more demographic variables...
     input_data_scaled = scaler.transform(input_data)
     prediction = model.predict(input_data_scaled)
 
