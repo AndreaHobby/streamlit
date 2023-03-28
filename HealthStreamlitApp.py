@@ -24,7 +24,9 @@ a previous project of mine that uses National Center for Health Statistics (NCHS
 test results will be used. By identifying patterns in the data, models can predict a patient's risk of developing CKD, allowing for early intervention and management.''')
 
 
-model = load_model('model')
+#load the model from disk
+import joblib
+model = joblib.load(r"model.sav")
  
 # Define options for selectboxes
 
