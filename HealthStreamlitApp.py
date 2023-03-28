@@ -51,8 +51,6 @@ marital_status_float = list(map(float, [i[:-1] for i in marital_status_options])
 income_options = ["<20k", "20-34k", "35-49k", "50-74k", "75-99k", "100k+"]
 income_float = list(map(float, [i[:-1] for i in income_options]))
 
- 
-  
 caresource_options = ["Doctor's Office/Clinic", "Hospital Inpatient", "Emergency Room"]
 caresource_float = list(map(float, range(len(caresource_options))))
 
