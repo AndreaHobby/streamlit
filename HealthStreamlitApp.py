@@ -107,7 +107,7 @@ diagnosis = "Unknown"
 
 # Create button to run model
 if st.button("CKD Risk Result"):
-    input_data = [[age_options,
+    input_data = [age_options,
 gender_options,
 racegrp_options,
 education_options,
@@ -135,7 +135,7 @@ chf_options,
 anemia_options,
 fam_hypertension_options,
 fam_diabetes_options,
-fam_cvd_options]]  
+fam_cvd_options]  
     prediction = model.predict(input_data)
 
     # set the diagnosis based on the prediction result
