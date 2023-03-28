@@ -68,7 +68,7 @@ fam_cvd_options = ["Yes", "No"]
 st.subheader('Demographics')   
 age = st.selectbox("Age", age_options)
 gender = st.selectbox("Gender", gender_options)
-racegrp = st.selectbox("Racegrp", racegrp_options)
+racegrp = st.selectbox("Race", racegrp_options)
 education = st.selectbox("Education", education_options)
 marital_status = st.selectbox("Marital Status", marital_status_options)
 income = st.selectbox("Income", income_options)
