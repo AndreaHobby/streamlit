@@ -24,8 +24,12 @@ a previous project of mine that uses National Center for Health Statistics (NCHS
 test results will be used. By identifying patterns in the data, models can predict a patient's risk of developing CKD, allowing for early intervention and management.''')
 
 
-#load data
-#loaded_model = pickle.load(open('Trained_DT_model.sav', 'rb'))
+# Load the trained model from the pickle file
+with open('model.pkl', 'rb') as file:
+    model = pickle.load(file)
+
+# Use the model in Streamlit app
+st.write(model.predict(X))
  
 # Define options for selectboxes
 
