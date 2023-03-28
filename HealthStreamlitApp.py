@@ -31,56 +31,57 @@ test results will be used. By identifying patterns in the data, models can predi
 # Define options for selectboxes
 
 
-  
-    careource_options = ["Doctor's Office/Clinic", "Hospital Inpatient", "Emergency Room"]
-    health_insurance_options = ["Yes", "No"]
-    weight_options = ["Underweight", "Normal", "Overweight", "Obese"]
-    height_options = ["<5ft", "5ft-5ft5in", "5ft5in-6ft", ">6ft"]
-    sbp_options = ["<120", "120-129", "130-139", "140-149", "150+"]
-    dbp_options = ["<80", "80-84", "85-89", "90-99", "100+"]
-    hdl_options = ["<40", "40-49", "50-59", "60+"]
-    ldl_options = ["<100", "100-129", "130-159", "160-189", "190+"]
-    total_chol_options = ["<200", "200-239", "240-279", "280+"]
-    dyslipidemia_options = ["Yes", "No"]
-    pvd_options = ["Yes", "No"]
-    activity_options = ["Inactive", "Moderately Active", "Active"]
-    poor_vision_options = ["Yes", "No"]
-    smoker_options = ["Current Smoker", "Former Smoker", "Never Smoked"]
-    hypertension_options = ["Yes", "No"]
-    diabetes_options = ["Yes", "No"]
-    stroke_options = ["Yes", "No"]
-    cvd_options = ["Yes", "No"]
-    chf_options = ["Yes", "No"]
-    anemia_options = ["Yes", "No"]
- 
-    fam_hypertension_options = ["Yes", "No"]
-    fam_diabetes_options = ["Yes", "No"]
-    fam_cvd_options = ["Yes", "No"]
-    
-    options = {
-        "age": age_options,
-        "gender": gender_options,
-        "racegrp": racegrp_options,
-        "education": education_options,
-        "marital_status": marital_status_options,
-        "income": income_options,
-        "caresource": careource_options,
-        "health_insurance": health_insurance_options,
-        "weight": weight_options,
-        "height": height_options,
-        "sbp": sbp_options,
-        "dbp": dbp_options,
-        "hdl": hdl_options,
-        "ldl": ldl_options,
-        "total_chol": total_chol_options,
-        "dyslipidemia": dyslipidemia_options,
-        "pvd": pvd_options,
-        "activity": activity_options,
-        "poor_vision": poor_vision_options,
-        "smoker": smoker_options,
-        "hypertension": hypertension_options,
-        "diabetes": diabetes_options
-    }
+
+careource_options = ["Doctor's Office/Clinic", "Hospital Inpatient", "Emergency Room"]
+health_insurance_options = ["Yes", "No"]
+weight_options = ["Underweight", "Normal", "Overweight", "Obese"]
+height_options = ["<5ft", "5ft-5ft5in", "5ft5in-6ft", ">6ft"]
+sbp_options = ["<120", "120-129", "130-139", "140-149", "150+"]
+dbp_options = ["<80", "80-84", "85-89", "90-99", "100+"]
+hdl_options = ["<40", "40-49", "50-59", "60+"]
+ldl_options = ["<100", "100-129", "130-159", "160-189", "190+"]
+total_chol_options = ["<200", "200-239", "240-279", "280+"]
+dyslipidemia_options = ["Yes", "No"]
+pvd_options = ["Yes", "No"]
+activity_options = ["Inactive", "Moderately Active", "Active"]
+poor_vision_options = ["Yes", "No"]
+smoker_options = ["Current Smoker", "Former Smoker", "Never Smoked"]
+hypertension_options = ["Yes", "No"]
+diabetes_options = ["Yes", "No"]
+stroke_options = ["Yes", "No"]
+cvd_options = ["Yes", "No"]
+chf_options = ["Yes", "No"]
+anemia_options = ["Yes", "No"]
+
+fam_hypertension_options = ["Yes", "No"]
+fam_diabetes_options = ["Yes", "No"]
+fam_cvd_options = ["Yes", "No"]
+
+options = {
+"age": age_options,
+"gender": gender_options,
+"racegrp": racegrp_options,
+"education": education_options,
+"marital_status": marital_status_options,
+"income": income_options,
+"caresource": careource_options,
+"health_insurance": health_insurance_options,
+"weight": weight_options,
+"height": height_options,
+"sbp": sbp_options,
+"dbp": dbp_options,
+"hdl": hdl_options,
+"ldl": ldl_options,
+"total_chol": total_chol_options,
+"dyslipidemia": dyslipidemia_options,
+"pvd": pvd_options,
+"activity": activity_options,
+"poor_vision": poor_vision_options,
+"smoker": smoker_options,
+"hypertension": hypertension_options,
+"diabetes": diabetes_options
+}
+
 
 
  
