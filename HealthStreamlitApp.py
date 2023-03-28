@@ -34,7 +34,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 # Define options for selectboxes
 
 age_options = ["<40", "40-49", "50-59", "60-69", "70+"]
-age_options_float = list(map(float, age_options))
+age_float = list(map(float, age_options))
 
 gender_options = ["Male", "Female"]
 gender_float = list(map(lambda x: float(1.0) if x == "Male" else float(0.0), gender_options))
@@ -44,69 +44,69 @@ education_options = ["<High School", "High School/GED", "Some College", "College
 marital_status_options = ["Married", "Widowed", "Divorced", "Separated", "Never Married"]
 
 income_options = ["<20k", "20-34k", "35-49k", "50-74k", "75-99k", "100k+"]
-income_options_float = list(map(float, [i[:-1] for i in income_options]))
+income_float = list(map(float, [i[:-1] for i in income_options]))
 
  
   
 caresource_options = ["Doctor's Office/Clinic", "Hospital Inpatient", "Emergency Room"]
-caresource_options_float = list(map(float, range(len(caresource_options))))
+caresource_float = list(map(float, range(len(caresource_options))))
 
 health_insurance_options = ["Yes", "No"]
-health_insurance_options_float = list(map(float, range(len(health_insurance_options))))
+health_insurance_float = list(map(float, range(len(health_insurance_options))))
 
 weight_options = ["Underweight", "Normal", "Overweight", "Obese"]
-weight_options_float = list(map(float, range(len(weight_options))))
+weight_float = list(map(float, range(len(weight_options))))
 
 height_options = ["<5ft", "5ft-5ft5in", "5ft5in-6ft", ">6ft"]
-height_options_float = list(map(float, range(len(height_options))))
+height_float = list(map(float, range(len(height_options))))
 
 sbp_options = ["<120", "120-129", "130-139", "140-149", "150+"]
-sbp_options_float = list(map(float, range(len(sbp_options))))
+sbp_float = list(map(float, range(len(sbp_options))))
 
 dbp_options = ["<80", "80-84", "85-89", "90-99", "100+"]
-dbp_options_float = list(map(float, range(len(dbp_options))))
+dbp_float = list(map(float, range(len(dbp_options))))
 
 hdl_options = ["<40", "40-49", "50-59", "60+"]
-hdl_options_float = list(map(float, range(len(hdl_options))))
+hdl_float = list(map(float, range(len(hdl_options))))
 
 ldl_options = ["<100", "100-129", "130-159", "160-189", "190+"]
-ldl_options_float = list(map(float, range(len(ldl_options))))
+ldl_float = list(map(float, range(len(ldl_options))))
 
 total_chol_options = ["<200", "200-239", "240-279", "280+"]
-total_chol_options_float = list(map(float, range(len(total_chol_options))))
+total_chol_float = list(map(float, range(len(total_chol_options))))
 
 dyslipidemia_options = ["Yes", "No"]
-dyslipidemia_options_float = list(map(float, range(len(dyslipidemia_options))))
+dyslipidemia_float = list(map(float, range(len(dyslipidemia_options))))
 
 pvd_options = ["Yes", "No"]
-pvd_options_float = list(map(float, range(len(pvd_options))))
+pvd_float = list(map(float, range(len(pvd_options))))
 
 activity_options = ["Inactive", "Moderately Active", "Active"]
-activity_options_float = list(map(float, range(len(activity_options))))
+activity_float = list(map(float, range(len(activity_options))))
 
 poor_vision_options = ["Yes", "No"]
-poor_vision_options_float = list(map(float, range(len(poor_vision_options))))
+poor_vision_float = list(map(float, range(len(poor_vision_options))))
 
 smoker_options = ["Current Smoker", "Former Smoker", "Never Smoked"]
-smoker_options_float = list(map(float, range(len(smoker_options))))
+smoker_float = list(map(float, range(len(smoker_options))))
 
 hypertension_options = ["Yes", "No"]
-hypertension_options_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), hypertension_options))
+hypertension_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), hypertension_options))
 
 diabetes_options = ["Yes", "No"]
-diabetes_options_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), diabetes_options))
+diabetes_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), diabetes_options))
 
 stroke_options = ["Yes", "No"]
-stroke_options_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), stroke_options))
+stroke_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), stroke_options))
 
 cvd_options = ["Yes", "No"]
-cvd_options_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), cvd_options))
+cvd_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), cvd_options))
 
 chf_options = ["Yes", "No"]
-chf_options_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), chf_options))
+chf_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), chf_options))
 
 anemia_options = ["Yes", "No"]
-anemia_options_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), anemia_options))
+anemia_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), anemia_options))
  
 fam_hypertension_options = ["Yes", "No"]
 fam_hypertension_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), fam_hypertension_options))
