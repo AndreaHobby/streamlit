@@ -156,48 +156,6 @@ Fam_Diabetes = st.selectbox('Do you have a family history of Diabetes?', fam_dia
 Fam_CVD = st.selectbox('Do you have a family history of cardiovascular disease?', fam_cvd_options)
 
 
-variables = [
-    age_float,
-    gender_float,
-    racegrp_float,
-    education_float,
-    marital_status_float,
-    income_float,
-    caresource_float,
-    health_insurance_float,
-    weight_float,
-    height_float,
-    sbp_float,
-    dbp_float,
-    hdl_float,
-    ldl_float,
-    total_chol_float,
-    dyslipidemia_float,
-    pvd_float,
-    activity_float,
-    poor_vision_float,
-    smoker_float,
-    hypertension_float,
-    diabetes_float,
-    stroke_float,
-    cvd_float,
-    chf_float,
-    anemia_float,
-    fam_hypertension_float,
-    fam_diabetes_float,
-    fam_cvd_float
-]
-
-for variable in variables:
-    if isinstance(variable, float):
-        print(f"{variable} is a float.")
-    else:
-        print(f"{variable} is not a float.")
-
-# define diagnosis variable and set it to a default value
-diagnosis = "Unknown"
-
-
 
 # Create button to run model
 if st.button("CKD Risk Result"):
