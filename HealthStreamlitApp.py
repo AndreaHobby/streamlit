@@ -198,6 +198,8 @@ if st.button("CKD Risk Result"):
     ])
     # Reshape input_data to match the model's expected shape if necessary
     input_data = input_data.reshape(1, -1)
+    st.write("Data type of 'input_data':", type(input_data))   
+ 
 
     # Make prediction
     prediction = model.predict(input_data)
