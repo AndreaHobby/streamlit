@@ -161,6 +161,7 @@ diagnosis = "Unknown"
 # Create button to run model
 import numpy as np
 
+
 # Create button to run model
 if st.button("CKD Risk Result"):
     input_data = np.array([
@@ -212,7 +213,6 @@ if st.button("CKD Risk Result"):
 
 #create sidebar
 st.sidebar.title("About CKD App")
-
 
 with st.sidebar:
     st.write("""
