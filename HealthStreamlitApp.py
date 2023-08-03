@@ -34,6 +34,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 # Define options for selectboxes
 age_options = ["<40", "40-49", "50-59", "60-69", "70+"]
 age_float = list(map(float, range(len(age_options))))
+st.write("Data type of 'age_float':", type(age_float))
 
 gender_options = ["Male", "Female"]
 gender_float = list(map(lambda x: float(1.0) if x == "Male" else float(0.0), gender_options))
