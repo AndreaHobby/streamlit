@@ -159,46 +159,55 @@ Fam_CVD = st.selectbox('Do you have a family history of cardiovascular disease?'
 diagnosis = "Unknown"
 
 # Create button to run model
+import numpy as np
+
+# Create button to run model
 if st.button("CKD Risk Result"):
-    input_data = [
-age_float,
-gender_float,
-racegrp_float,
-education_float,
-marital_status_float,
-income_float,
-caresource_float,
-health_insurance_float,
-weight_float,
-height_float,
-sbp_float,
-dbp_float,
-hdl_float,
-ldl_float,
-total_chol_float,
-dyslipidemia_float,
-pvd_float,
-activity_float,
-poor_vision_float,
-smoker_float,
-hypertension_float,
-diabetes_float,
-stroke_float,
-cvd_float,
-chf_float,
-anemia_float,
-fam_hypertension_float,
-fam_diabetes_float,
-fam_cvd_float]
+    input_data = np.array([
+        age_float,
+        gender_float,
+        racegrp_float,
+        education_float,
+        marital_status_float,
+        income_float,
+        caresource_float,
+        health_insurance_float,
+        weight_float,
+        height_float,
+        sbp_float,
+        dbp_float,
+        hdl_float,
+        ldl_float,
+        total_chol_float,
+        dyslipidemia_float,
+        pvd_float,
+        activity_float,
+        poor_vision_float,
+        smoker_float,
+        hypertension_float,
+        diabetes_float,
+        stroke_float,
+        cvd_float,
+        chf_float,
+        anemia_float,
+        fam_hypertension_float,
+        fam_diabetes_float,
+        fam_cvd_float
+    ])
+    # Reshape input_data to match the model's expected shape if necessary
+    input_data = input_data.reshape(1, -1)
+
+    # Make prediction
     prediction = model.predict(input_data)
 
-    # set the diagnosis based on the prediction result
-    if prediction == 1:
+    # Set the diagnosis based on the prediction result
+    if prediction[0] == 1:
         diagnosis = "CKD"
     else:
         diagnosis = "No CKD"
 
-    st.write("The predicted kidney disease status is", diagnosis)
+    # Display the predicted kidney disease status
+    st.markdown("The predicted kidney disease status is **{}**".format(diagnosis))
 
 
 #create sidebar
