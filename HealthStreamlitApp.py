@@ -198,7 +198,7 @@ if st.button("CKD Risk Result"):
     ])
     # Reshape input_data to match the model's expected shape if necessary
     input_data = input_data.reshape(1, -1)
-    st.write("Data type of 'input_data':", type(input_data))   
+    
  
 
     # Make prediction
@@ -214,9 +214,9 @@ if st.button("CKD Risk Result"):
     st.markdown("The predicted kidney disease status is **{}**".format(diagnosis))
 
 
-#create sidebar
+#create sidebar   
 st.sidebar.title("About CKD App")
-
+st.write("Data type of 'input_data':", type(input_data))   
 with st.sidebar:
     st.write("""
             Please see your doctor for an accurate risk prediction. This tool is for learning purposes.
