@@ -18,8 +18,17 @@ age_float = list(map(float, range(len(age_options))))
 gender_options = ["Male", "Female"]
 gender_float = list(map(lambda x: float(1.0) if x == "Male" else float(0.0), gender_options))
 
-racegrp_options = ["White", "Black", "Hispanic", "Asian", "Other"]
-racegrp_float = list(map(float, range(len(racegrp_options))))
+blkgrp_options = ["Yes", "No"]
+blkgrp_float =  list(map(float, range(len(blkgrp_options))))
+
+othergrp_options = ["Yes", "No"]
+othergrp_float =  list(map(float, range(len(othergrp_options))))
+
+whitegrp_options = ["Yes", "No"]
+whitegrp_float =  list(map(float, range(len(whitegrp_options))))
+
+ethgrp_options = ["Yes", "No"]
+ethgrp_float =  list(map(float, range(len(ethgrp_options))))
 
 education_options = ["<High School", "High School/GED", "Some College", "College Graduate"]
 education_float = list(map(float, range(len(education_options))))
@@ -100,7 +109,10 @@ fam_cvd_float = list(map(lambda x: float(1.0) if x == "Yes" else float(0.0), fam
 st.subheader('Demographics')
 age = st.selectbox("Age", age_options)
 gender = st.selectbox("Gender", gender_options)
-racegrp = st.selectbox("Race", racegrp_options)
+blkgrp = st.selectbox("Race: Black", racegrp_options)
+whitegrp = st.selectbox("Race: White", racegrp_options)
+othergrp = st.selectbox("Race: Other", racegrp_options)
+ethgrp = st.selectbox("Ethnicity: Hispanic", racegrp_options)
 education = st.selectbox("Education", education_options)
 marital_status = st.selectbox("Marital Status", marital_status_options)
 income = st.selectbox("Income", income_options)
