@@ -148,7 +148,10 @@ if st.button("CKD Risk Result"):
     input_data = np.array([
         age_float[age_options.index(age)],
         gender_float[gender_options.index(gender)],
-        racegrp_float[racegrp_options.index(racegrp)],
+        blkgrp_float[racegrp_options.index(Racegrp_black)],
+        whitegrp_float[racegrp_options.index(Racegrp_white)],
+        othergrp_float[racegrp_options.index(Racegrp_other)],
+        hispgrp_float[racegrp_options.index(Racegrp_hispa)],
         education_float[education_options.index(education)],
         marital_status_float[marital_status_options.index(marital_status)],
         income_float[income_options.index(income)],
